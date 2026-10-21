@@ -18,8 +18,8 @@ import SwiftUI
 
 // Each player has their own colour.
 // TRY: Change these two colours. Try Color.purple, Color.green or Color.pink.
-let playerOneColor: Color = Color.blue
-let playerTwoColor: Color = Color.orange
+let playerOneColor: Color = Color.purple
+let playerTwoColor: Color = Color.pink
 
 // The game itself: what it remembers, what it shows on the screen,
 // and what it does when you click a button.
@@ -101,7 +101,7 @@ struct PigView: View {
             // The die.
             // TRY: Change the size of the die from 120 to something bigger or smaller.
             Image(systemName: dieSymbol)
-                .font(.system(size: 120))
+                .font(.system(size: 90))
                 .foregroundStyle(turnColor)
 
             Text("Turn total: \(turnTotal)")
@@ -151,7 +151,7 @@ struct PigView: View {
     func rollDie() {
 
         // Pick a random whole number from 1 to 6, just like a real die.
-        let roll: Int = Int.random(in: 1...6)
+        let roll: Int = Int.random(in: 2...6)
 
         // Show the matching die face. For a roll of 4, the symbol is "die.face.4.fill".
         dieSymbol = "die.face.\(roll).fill"
